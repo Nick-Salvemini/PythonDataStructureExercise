@@ -19,3 +19,13 @@ def partition(lst, fn):
         >>> partition(["hi", None, 6, "bye"], is_string)
         [['hi', 'bye'], [None, 6]]
     """
+
+    a_and_b_list = [[],[]]
+
+    for elem in lst:
+        if fn(elem) == True:
+            a_and_b_list[0].append(elem)
+        else:
+            a_and_b_list[1].append(elem)
+    
+    return a_and_b_list

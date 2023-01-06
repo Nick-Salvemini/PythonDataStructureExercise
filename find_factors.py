@@ -13,3 +13,11 @@ def find_factors(num):
     >>> find_factors(321421)
     [1, 293, 1097, 321421]
     """
+    num_list = range(1, num+1)
+    factor_list = []
+
+    for number in num_list:
+        if num % number == 0:
+            factor_list.append(number)
+
+    return factor_list

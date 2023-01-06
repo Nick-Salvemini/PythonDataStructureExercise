@@ -15,3 +15,19 @@ def two_list_dictionary(keys, values):
         >>> two_list_dictionary(['a', 'b', 'c'], [1, 2, 3, 4])
         {'a': 1, 'b': 2, 'c': 3}
    """
+    kv_dict = {}
+    index = 0
+
+    if len(keys) > len(values):
+        for key in keys:
+            kv_dict[key] = None
+        for val in values:
+            kv_dict[list(kv_dict)[index]] = val
+            index += 1
+
+    else:
+        for key in keys:
+            kv_dict[key] = values[index]
+            index += 1
+
+    return kv_dict
